@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { FaWhatsapp } from 'react-icons/fa'
 import { CONTACT } from '@/data/siteData'
 
@@ -23,9 +24,14 @@ export default function Navbar() {
         <div className="container">
           <div className="nav-inner">
             <a href="#hero" className="nav-logo" aria-label="Ir para o início">
-              <span className="logo-num">5º</span>
-              <span className="logo-name">Tabelionato de Notas</span>
-              <span className="logo-sub">Goiânia — GO</span>
+              <Image
+                src="/logo.jpeg"
+                alt="5º Tabelionato de Notas de Goiânia"
+                width={140}
+                height={56}
+                style={{ objectFit: 'contain' }}
+                priority
+              />
             </a>
 
             <div className="nav-links">
