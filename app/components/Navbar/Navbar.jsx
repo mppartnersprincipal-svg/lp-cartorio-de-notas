@@ -49,8 +49,8 @@ export default function Navbar() {
               <Image
                 src="/logo.jpeg"
                 alt="5º Tabelionato de Notas de Goiânia"
-                width={140}
-                height={56}
+                width={165}
+                height={66}
                 style={{ objectFit: 'contain' }}
                 priority
               />

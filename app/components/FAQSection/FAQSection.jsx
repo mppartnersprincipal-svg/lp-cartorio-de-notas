@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: 'Como é calculado o valor dos serviços?',
-    a: 'Os emolumentos (taxas) são tabelados pelo Estado de Goiás e publicados pelo Tribunal de Justiça de Goiás (TJGO), sendo iguais em todos os cartórios do estado. Podemos gerar um orçamento específico para o seu caso — basta entrar em contato.',
+    a: 'Os emolumentos (taxas) são tabelados e publicados pelo Tribunal de Justiça de Goiás (TJGO), sendo iguais em todos os cartórios do estado. Podemos gerar um orçamento específico para o seu caso — basta entrar em contato.',
   },
   {
     q: 'Vocês atendem clientes de outros estados?',
@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: 'O que é o reconhecimento de firma?',
-    a: 'É a certificação pelo tabelião de que uma assinatura aposta em um documento é autêntica. Existem dois tipos: por semelhança (comparando com a assinatura arquivada no cartório) e em aberto (o signatário assina na presença do tabelião ou escrevente autorizado).',
+    a: 'É a certificação pelo tabelião de que uma assinatura aposta em um documento é autêntica. Existem dois tipos: por semelhança (comparando com a assinatura arquivada no cartório) e por verdadeiro (o signatário assina na presença do tabelião ou escrevente autorizado).',
   },
 ]
 
