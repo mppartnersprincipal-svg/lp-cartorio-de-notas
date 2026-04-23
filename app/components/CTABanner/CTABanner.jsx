@@ -6,6 +6,7 @@ export default function CTABanner() {
 
   return (
     <section id="cta-banner">
+      <div className="cta-banner-gold-line" aria-hidden="true"></div>
       <div className="container">
         <div className="cta-banner-inner">
           <div className="section-badge">

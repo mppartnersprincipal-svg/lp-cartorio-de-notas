@@ -58,13 +58,13 @@ export default function HeroSection() {
           <div className="hero-image-wrap">
             <div className="hero-image-frame">
               <Image
-                src="/foto-01.webp"
+                src="/foto-02.webp"
                 alt="5º Tabelionato de Notas de Goiânia"
                 fill
                 priority
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
               />
             </div>
             <div className="hero-image-badge">

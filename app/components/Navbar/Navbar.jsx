@@ -4,18 +4,40 @@ import Image from 'next/image'
 import { FaWhatsapp } from 'react-icons/fa'
 import { CONTACT } from '@/data/siteData'
 
+const NAV_LINKS = [
+  { href: '#services',      label: 'Serviços' },
+  { href: '#about',         label: 'Sobre' },
+  { href: '#differentials', label: 'Diferenciais' },
+  { href: '#testimonials',  label: 'Depoimentos' },
+  { href: '#contact',       label: 'Contato' },
+]
+
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled]       = useState(false)
+  const [menuOpen, setMenuOpen]           = useState(false)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    const onScroll = () => setIsScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]')
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id)
+        })
+      },
+      { threshold: 0.35, rootMargin: '-72px 0px -40% 0px' }
+    )
+    sections.forEach(s => obs.observe(s))
+    return () => obs.disconnect()
   }, [])
 
   const whatsappHref = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(CONTACT.whatsappText)}`
-
   const closeMenu = () => setMenuOpen(false)
 
   return (
@@ -35,11 +57,18 @@ export default function Navbar() {
             </a>
 
             <div className="nav-links">
-              <a href="#services">Serviços</a>
-              <a href="#about">Sobre</a>
-              <a href="#differentials">Diferenciais</a>
-              <a href="#testimonials">Depoimentos</a>
-              <a href="#contact">Contato</a>
+              {NAV_LINKS.map(({ href, label }) => {
+                const id = href.replace('#', '')
+                return (
+                  <a
+                    key={href}
+                    href={href}
+                    className={activeSection === id ? 'active' : ''}
+                  >
+                    {label}
+                  </a>
+                )
+              })}
             </div>
 
             <a
@@ -54,6 +83,7 @@ export default function Navbar() {
             <button
               className="hamburger"
               aria-label="Abrir menu"
+              aria-expanded={menuOpen}
               onClick={() => setMenuOpen(prev => !prev)}
             >
               <span></span>
@@ -65,11 +95,9 @@ export default function Navbar() {
       </nav>
 
       <div className={`mobile-nav${menuOpen ? ' open' : ''}`}>
-        <a href="#services" onClick={closeMenu}>Serviços</a>
-        <a href="#about" onClick={closeMenu}>Sobre</a>
-        <a href="#differentials" onClick={closeMenu}>Diferenciais</a>
-        <a href="#testimonials" onClick={closeMenu}>Depoimentos</a>
-        <a href="#contact" onClick={closeMenu}>Contato</a>
+        {NAV_LINKS.map(({ href, label }) => (
+          <a key={href} href={href} onClick={closeMenu}>{label}</a>
+        ))}
         <a
           href={whatsappHref}
           className="btn btn-primary"
