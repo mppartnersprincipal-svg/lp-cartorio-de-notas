@@ -6,7 +6,7 @@ const STEPS = [
     icon: <FaWhatsapp />,
     number: '01',
     title: 'Fale Conosco',
-    description: 'Entre em contato pelo WhatsApp ou telefone. Nossa equipe te orienta sobre quais documentos você precisa e como proceder.',
+    description: 'Entre em contato pelo WhatsApp. Nossa equipe te orienta sobre quais documentos você precisa e como proceder.',
   },
   {
     icon: <FaFileAlt />,
