@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaClock, FaPhone } from 'react-icons/fa'
 import { CONTACT } from '@/data/siteData'
 
 const NAV_LINKS = [
@@ -31,7 +31,7 @@ export default function Navbar() {
           if (entry.isIntersecting) setActiveSection(entry.target.id)
         })
       },
-      { threshold: 0.35, rootMargin: '-72px 0px -40% 0px' }
+      { threshold: 0.35, rootMargin: '-140px 0px -40% 0px' }
     )
     sections.forEach(s => obs.observe(s))
     return () => obs.disconnect()
@@ -43,55 +43,99 @@ export default function Navbar() {
   return (
     <>
       <nav id="navbar" className={isScrolled ? 'scrolled' : ''}>
-        <div className="container">
-          <div className="nav-inner">
-            <a href="#hero" className="nav-logo" aria-label="Ir para o início">
-              <Image
-                src="/logo.jpeg"
-                alt="5º Tabelionato de Notas de Goiânia"
-                width={165}
-                height={66}
-                style={{ objectFit: 'contain' }}
-                priority
-              />
-            </a>
 
-            <div className="nav-links">
-              {NAV_LINKS.map(({ href, label }) => {
-                const id = href.replace('#', '')
-                return (
-                  <a
-                    key={href}
-                    href={href}
-                    className={activeSection === id ? 'active' : ''}
-                  >
-                    {label}
+        {/* BARRA SUPERIOR: fundo verde escuro — logo + info de contato */}
+        <div className="header-top">
+          <div className="container">
+            <div className="header-top-inner">
+
+              <a href="#hero" className="nav-logo" aria-label="Ir para o início">
+                <Image
+                  src="/logo.jpeg"
+                  alt="5º Tabelionato de Notas de Goiânia"
+                  width={210}
+                  height={84}
+                  style={{ objectFit: 'contain' }}
+                  priority
+                />
+              </a>
+
+              <div className="header-top-info">
+                <div className="header-info-item">
+                  <FaClock />
+                  <div className="header-info-text">
+                    <strong>8:00 – 17:00</strong>
+                    <span>Segunda – Sexta</span>
+                  </div>
+                </div>
+
+                <span className="header-info-sep" />
+
+                <div className="header-info-item">
+                  <FaPhone />
+                  <strong>{CONTACT.phone1}</strong>
+                </div>
+
+                <span className="header-info-sep" />
+
+                <div className="header-info-item">
+                  <FaWhatsapp />
+                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                    <strong>{CONTACT.phone2}</strong>
                   </a>
-                )
-              })}
+                </div>
+              </div>
+
             </div>
-
-            <a
-              href={whatsappHref}
-              className="btn btn-primary nav-cta"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaWhatsapp /> Fale pelo WhatsApp
-            </a>
-
-            <button
-              className="hamburger"
-              aria-label="Abrir menu"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(prev => !prev)}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
           </div>
         </div>
+
+        {/* BARRA DE NAVEGAÇÃO: branca com links + CTA */}
+        <div className="header-nav">
+          <div className="container">
+            <div className="nav-inner">
+
+              <div className="nav-links">
+                {NAV_LINKS.map(({ href, label }) => {
+                  const id = href.replace('#', '')
+                  return (
+                    <a
+                      key={href}
+                      href={href}
+                      className={activeSection === id ? 'active' : ''}
+                    >
+                      {label}
+                    </a>
+                  )
+                })}
+              </div>
+
+              <div className="nav-right">
+                <a
+                  href={whatsappHref}
+                  className="btn btn-primary nav-cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp /> Fale pelo WhatsApp
+                </a>
+
+                <button
+                  className="hamburger"
+                  aria-label="Abrir menu"
+                  aria-expanded={menuOpen}
+                  onClick={() => setMenuOpen(prev => !prev)}
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </nav>
 
       <div className={`mobile-nav${menuOpen ? ' open' : ''}`}>

@@ -260,55 +260,98 @@ section { overflow: hidden; }
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition: box-shadow var(--transition);
 }
 
-#navbar.scrolled {
-  border-color: var(--border);
-  box-shadow: var(--shadow-sm);
+#navbar.scrolled { box-shadow: var(--shadow-md); }
+
+/* --- BARRA SUPERIOR (verde escuro) --- */
+.header-top {
+  background: var(--green-dark);
+  border-bottom: 2px solid rgba(138,156,80,0.45);
 }
 
-.nav-inner {
+.header-top-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
-  gap: var(--sp-8);
+  height: 88px;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  line-height: 1.1;
   flex-shrink: 0;
 }
 
-/* Mantido para fallback (caso sem imagem) */
-.nav-logo .logo-num {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--green);
+.header-top-info {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
 }
 
-.nav-logo .logo-name {
-  font-family: var(--font-serif);
-  font-size: 0.85rem;
+.header-info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.header-info-item > svg {
+  color: var(--green-light);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.header-info-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.header-info-text strong,
+.header-info-item > strong {
+  font-size: 0.92rem;
   font-weight: 600;
-  color: var(--black);
+  color: var(--white);
+}
+
+.header-info-text span {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.6);
   letter-spacing: 0.03em;
 }
 
-.nav-logo .logo-sub {
-  font-size: 0.7rem;
-  color: var(--gray-mid);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+.header-info-item a strong {
+  color: var(--white);
+  transition: color var(--transition);
+}
+
+.header-info-item a:hover strong { color: var(--green-light); }
+
+.header-info-sep {
+  width: 1px;
+  height: 38px;
+  background: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+
+/* --- BARRA DE NAVEGAÇÃO (branca) --- */
+.header-nav {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+#navbar.scrolled .header-nav { border-color: var(--border); }
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  gap: var(--sp-6);
 }
 
 .nav-links {
@@ -345,6 +388,13 @@ section { overflow: hidden; }
 .nav-links a.active { color: var(--green); }
 .nav-links a.active::after { transform: scaleX(1); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--sp-4);
+}
+
 .nav-cta { flex-shrink: 0; }
 
 .hamburger {
@@ -370,11 +420,11 @@ section { overflow: hidden; }
   transition: transform var(--transition), opacity var(--transition);
 }
 
-/* Mobile nav */
+/* Mobile nav dropdown */
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 72px;
+  top: 140px;
   left: 0;
   right: 0;
   background: var(--white);
@@ -410,7 +460,7 @@ section { overflow: hidden; }
    HERO
 ======================== */
 #hero {
-  padding-top: 72px;
+  padding-top: 140px;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1773,9 +1823,15 @@ section { overflow: hidden; }
 }
 
 @media (max-width: 768px) {
+  /* Navbar mobile: esconde info e links, mostra hamburger */
+  .header-top-info { display: none; }
+  .header-top-inner { height: 72px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
+  .nav-inner { height: 44px; justify-content: flex-end; }
+  .mobile-nav { top: 116px; }
 
+  #hero { padding-top: 116px; }
   #hero::before { display: none; }
   #hero::after  { display: none; }
 
