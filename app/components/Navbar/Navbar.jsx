@@ -51,7 +51,7 @@ export default function Navbar() {
 
               <a href="#hero" className="nav-logo" aria-label="Ir para o início">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="5º Tabelionato de Notas de Goiânia"
                   width={210}
                   height={84}

@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div>
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="5º Tabelionato de Notas de Goiânia"
                 width={160}
                 height={64}
