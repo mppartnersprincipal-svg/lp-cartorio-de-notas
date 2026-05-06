@@ -854,6 +854,105 @@ section { overflow: hidden; }
   color: var(--gray-mid);
 }
 
+/* About — Trajectory */
+.about-trajectory {
+  margin-top: var(--sp-16);
+  padding-top: var(--sp-12);
+  border-top: 1px solid var(--border);
+}
+
+.trajectory-header {
+  margin-bottom: var(--sp-8);
+}
+
+.trajectory-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--gray-dark);
+  margin-top: var(--sp-3);
+}
+
+.trajectory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+}
+
+.trajectory-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  background: var(--green-pale);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-5);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.trajectory-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.trajectory-card--award {
+  background: var(--gold-pale);
+  border-color: rgba(184,147,42,0.25);
+}
+
+.traj-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--green-bg);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+.trajectory-card--award .traj-icon {
+  background: rgba(184,147,42,0.12);
+  color: var(--gold);
+}
+
+.traj-content strong {
+  display: block;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.35;
+  margin-bottom: 3px;
+}
+
+.traj-content span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--gray-mid);
+  line-height: 1.4;
+}
+
+.traj-year {
+  display: inline-block !important;
+  margin-top: 5px;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  color: var(--gold) !important;
+  background: rgba(184,147,42,0.12);
+  border-radius: 4px;
+  padding: 1px 7px;
+}
+
+@media (max-width: 1024px) {
+  .trajectory-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .trajectory-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ========================
    SERVICES
 ======================== */

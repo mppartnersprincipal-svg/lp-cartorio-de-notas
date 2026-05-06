@@ -1,4 +1,14 @@
-import { FaBalanceScale, FaShieldAlt, FaLaptop, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaBalanceScale, FaShieldAlt, FaLaptop, FaMapMarkerAlt, FaGraduationCap, FaAward } from 'react-icons/fa'
+
+const TRAJECTORY = [
+  { Icon: FaGraduationCap, title: 'Bacharel em Direito',             institution: 'PUC Rio de Janeiro',              year: '1961', award: false },
+  { Icon: FaGraduationCap, title: 'Especialista em Direito Civil',    institution: 'UFG',                             year: '1970', award: false },
+  { Icon: FaGraduationCap, title: 'Especialista em Direito Agrário',  institution: 'UFG',                             year: null,   award: false },
+  { Icon: FaGraduationCap, title: 'Mestre em Direito Agrário',        institution: 'UFG',                             year: null,   award: false },
+  { Icon: FaGraduationCap, title: 'Doutor em Direito Constitucional', institution: 'USP',                             year: null,   award: false },
+  { Icon: FaAward,         title: 'Benemérito da Justiça',            institution: 'Cartório do Ofício',              year: '1955', award: true  },
+  { Icon: FaGraduationCap, title: 'Pós-Doutor',                       institution: 'Universidade de Princeton (EUA)', year: '1986', award: false },
+]
 
 export default function AboutSection() {
   return (
@@ -72,6 +82,35 @@ export default function AboutSection() {
           </div>
 
         </div>
+
+        {/* Trajetória */}
+        <div className="about-trajectory">
+          <div className="trajectory-header">
+            <div className="section-badge">
+              <FaGraduationCap />
+              Formação &amp; Trajetória
+            </div>
+            <h3 className="trajectory-title">
+              Dr. Joveny Sebastião Candido de Oliveira
+            </h3>
+          </div>
+
+          <div className="trajectory-grid">
+            {TRAJECTORY.map(({ Icon, title, institution, year, award }, i) => (
+              <div key={i} className={`trajectory-card${award ? ' trajectory-card--award' : ''}`}>
+                <div className="traj-icon">
+                  <Icon />
+                </div>
+                <div className="traj-content">
+                  <strong>{title}</strong>
+                  <span>{institution}</span>
+                  {year && <span className="traj-year">{year}</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   )
