@@ -5,11 +5,10 @@ import { FaWhatsapp, FaClock, FaPhone } from 'react-icons/fa'
 import { CONTACT } from '@/data/siteData'
 
 const NAV_LINKS = [
-  { href: '#services',      label: 'Serviços' },
-  { href: '#about',         label: 'Sobre' },
-  { href: '#differentials', label: 'Diferenciais' },
-  { href: '#testimonials',  label: 'Depoimentos' },
-  { href: '#contact',       label: 'Contato' },
+  { href: '#services',     label: 'Serviços' },
+  { href: '#about',        label: 'Sobre nós' },
+  { href: '#testimonials', label: 'Depoimentos' },
+  { href: '#contact',      label: 'Contato' },
 ]
 
 export default function Navbar() {

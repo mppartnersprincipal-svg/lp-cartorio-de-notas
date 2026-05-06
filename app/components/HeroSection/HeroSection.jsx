@@ -17,8 +17,8 @@ export default function HeroSection() {
             </div>
 
             <h1 className="hero-title">
-              Segurança jurídica que<br />
-              <span>você pode confiar</span>
+              5º Tabelionato de Notas<br />
+              <span>Tabelionato Candido de Oliveira</span>
             </h1>
 
             <p className="hero-subtitle">
