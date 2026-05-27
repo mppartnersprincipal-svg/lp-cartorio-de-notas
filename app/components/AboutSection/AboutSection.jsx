@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FaBalanceScale, FaShieldAlt, FaLaptop, FaMapMarkerAlt, FaGraduationCap, FaAward } from 'react-icons/fa'
 
 const TRAJECTORY = [
@@ -81,6 +82,44 @@ export default function AboutSection() {
             </div>
           </div>
 
+        </div>
+
+        {/* Biografia — Dr. Joveny */}
+        <div className="about-bio">
+          <div className="about-bio-photo">
+            <Image
+              src="/dr-joveny.webp"
+              alt="Dr. Joveny Sebastião Candido de Oliveira"
+              fill
+              sizes="(max-width: 768px) 100vw, 380px"
+            />
+            <div className="about-bio-photo-frame" aria-hidden="true" />
+          </div>
+
+          <div className="about-bio-content">
+            <div className="section-badge">
+              <FaBalanceScale />
+              Sobre o Tabelião
+            </div>
+            <h3 className="about-bio-title">
+              Dr. Joveny S. Candido de Oliveira
+            </h3>
+            <p>
+              Com destacada trajetória jurídica e acadêmica, Dr. Joveny S. Candido de Oliveira é Bacharel em Direito pela Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), graduado em 1961.
+            </p>
+            <p>
+              Especializou-se em Direito Civil e Direito Agrário pela Universidade Federal de Goiás (UFG), onde também concluiu o Mestrado em Direito Agrário.
+            </p>
+            <p>
+              É Doutor em Direito Constitucional pela Universidade de São Paulo (USP), possuindo sólida formação voltada às áreas do Direito Constitucional, Civil e Agrário.
+            </p>
+            <p>
+              Atua como Serventuário da Justiça desde 1955, desenvolvendo carreira marcada pela experiência, tradição e dedicação ao exercício jurídico e notarial.
+            </p>
+            <p>
+              Em 1986, realizou Pós-Doutorado pela Universidade de Princeton, nos Estados Unidos, agregando formação acadêmica internacional à sua trajetória profissional.
+            </p>
+          </div>
         </div>
 
         {/* Trajetória */}
