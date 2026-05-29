@@ -3,3 +3,10 @@ node_modules/
 out/
 .env.local
 .env*.local
+
+# Ferramentas locais do Claude Code
+.claude/
+
+# Legado / material de origem (não faz parte do app)
+index.html
+briefing-cartorio*.pdf
