@@ -7,7 +7,6 @@ import { CONTACT } from '@/data/siteData'
 const NAV_LINKS = [
   { href: '#services',     label: 'Serviços' },
   { href: '#about',        label: 'Sobre nós' },
-  { href: '#testimonials', label: 'Depoimentos' },
   { href: '#contact',      label: 'Contato' },
 ]
 
