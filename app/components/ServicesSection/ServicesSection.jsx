@@ -26,7 +26,7 @@ export default function ServicesSection() {
             Nossos Serviços
           </div>
           <h2 className="section-title">
-            Tudo o que você precisa<br /><span>em um só lugar</span>
+            Serviços notariais com agilidade,<br /><span>segurança e credibilidade.</span>
           </h2>
           <p className="section-subtitle">
             Oferecemos uma ampla gama de serviços notariais para atender todas as suas necessidades jurídicas, com segurança e agilidade.
