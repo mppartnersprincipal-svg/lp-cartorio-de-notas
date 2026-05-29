@@ -15,48 +15,22 @@ export const DIFFERENTIALS = [
   {
     icon: 'whatsapp',
     title: 'Atendimento pelo WhatsApp',
-    description: 'Inicie seu atendimento diretamente pelo WhatsApp, sem filas e sem complicação. Nossa equipe responde com agilidade para orientar você sobre documentos, horários e serviços.',
+    description: 'Inicie seu atendimento diretamente pelo WhatsApp.',
   },
   {
     icon: 'userTie',
     title: 'Equipe Especializada',
-    description: 'Nossos profissionais são treinados e capacitados para oferecer um atendimento de excelência, com conhecimento técnico e dedicação completa a cada cliente.',
-  },
-  {
-    icon: 'calendarCheck',
-    title: 'Agendamento Fácil',
-    description: 'Agende seu atendimento de forma simples e rápida. Sem esperas desnecessárias — respeitamos o seu tempo tanto quanto o nosso.',
+    description: 'Nossos profissionais são treinados e capacitados para oferecer um atendimento de excelência.',
   },
   {
     icon: 'parking',
     title: 'Localização e Estacionamento',
-    description: 'Localizado no Setor Sul de Goiânia, com fácil acesso e bom estacionamento — um diferencial reconhecido e elogiado por nossos clientes.',
+    description: 'Localizado no Setor Sul de Goiânia, com fácil acesso e bom estacionamento.',
   },
   {
     icon: 'globeAmericas',
     title: 'Atendimento Nacional',
-    description: 'Atendemos clientes de todo o Brasil, inclusive estrangeiros que precisam de serviços de apostilamento e reconhecimento de documentos internacionais.',
-  },
-]
-
-export const TESTIMONIALS = [
-  {
-    initials: 'MR',
-    name: 'Marcos R.',
-    role: 'Cliente — Compra e Venda de Imóvel',
-    text: 'Fui muito bem atendido! O processo foi rápido, a equipe é extremamente profissional e ainda há estacionamento disponível — o que faz toda a diferença. Já indiquei para vários amigos.',
-  },
-  {
-    initials: 'AS',
-    name: 'Ana S.',
-    role: 'Advogada — Escritura de Inventário',
-    text: 'A equipe do 5º Tabelionato é incrivelmente capacitada e dedicada. Tiraram todas as minhas dúvidas com muita paciência e competência. O agendamento foi simples e o atendimento foi pontual.',
-  },
-  {
-    initials: 'CF',
-    name: 'Carlos F.',
-    role: 'Cliente — Procuração e Autenticação',
-    text: 'Rapidez e eficiência no atendimento. Cheguei com dúvidas sobre a documentação necessária e saí com tudo resolvido. Cartório de confiança, com profissionalismo de verdade!',
+    description: 'Atendemos clientes de todo o Brasil.',
   },
 ]
 
