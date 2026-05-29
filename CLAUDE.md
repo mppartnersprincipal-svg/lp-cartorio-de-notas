@@ -17,7 +17,7 @@ Single-page landing page for **5º Tabelionato de Notas de Goiânia** built with
 
 ### Data flow
 
-All business content (phone numbers, WhatsApp links, address, services list, testimonials, differentials) lives in **`app/data/siteData.js`**. This is the single source of truth — update content there, never hardcode it in components.
+All business content (phone numbers, WhatsApp links, address, services list, differentials) lives in **`app/data/siteData.js`**. This is the single source of truth — update content there, never hardcode it in components.
 
 Sensitive/environment-specific values (WhatsApp number, phones, email) are also mirrored in **`.env.local`** as `NEXT_PUBLIC_*` variables, but `siteData.js` is what components actually import.
 
@@ -25,7 +25,7 @@ Sensitive/environment-specific values (WhatsApp number, phones, email) are also 
 
 `app/page.jsx` is a pure composition root — it imports and renders all section components in order with no logic. Each section is a self-contained component under `app/components/<SectionName>/`.
 
-**Server Components** (no `'use client'`): `HeroSection`, `CredibilityBar`, `AboutSection`, `TestimonialsSection`, `CTABanner`, `ContactSection`, `Footer`, `WhatsAppFloat`.
+**Server Components** (no `'use client'`): `HeroSection`, `CredibilityBar`, `AboutSection`, `CTABanner`, `ContactSection`, `Footer`, `WhatsAppFloat`.
 
 **Client Components** (require `'use client'`):
 - `Navbar` — scroll listener (`useEffect`) + mobile menu toggle (`useState`)

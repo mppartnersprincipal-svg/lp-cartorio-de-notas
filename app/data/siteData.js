@@ -1,5 +1,5 @@
 export const CONTACT = {
-  whatsapp: '556232231882',
+  whatsapp: '556282434935',
   whatsappText: 'Olá! Vim pelo site e gostaria de mais informações sobre os serviços do 5º Tabelionato de Notas de Goiânia.',
   phone1: '(62) 3223-1882',
   phone1Href: 'tel:+556232231882',
