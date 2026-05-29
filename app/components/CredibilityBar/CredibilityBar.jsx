@@ -1,5 +1,5 @@
 'use client'
-import { FaLandmark, FaMobileAlt, FaUsers } from 'react-icons/fa'
+import { FaLandmark, FaUsers } from 'react-icons/fa'
 import { useCountUp } from '@/hooks/useCountUp'
 
 function CountItem({ target, suffix = '', label, icon }) {
@@ -23,12 +23,6 @@ export default function CredibilityBar() {
             suffix="+"
             label="anos de experiência e tradição"
             icon={<FaLandmark />}
-          />
-          <CountItem
-            target={100}
-            suffix="%"
-            label="atendimento digital e presencial"
-            icon={<FaMobileAlt />}
           />
           <CountItem
             target={5}

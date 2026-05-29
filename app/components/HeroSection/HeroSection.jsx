@@ -22,7 +22,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="hero-subtitle">
-              O 5º Tabelionato de Notas de Goiânia oferece escrituras, procurações, autenticações e muito mais — com atendimento especializado, agilidade e a tecnologia de um cartório digital.
+              O 5º Tabelionato de Notas de Goiânia disponibiliza serviços de lavratura de escrituras, procurações, autenticações e demais atos notariais com atendimento especializado, eficiência operacional e modernidade.
             </p>
 
             <div className="hero-actions">
@@ -43,10 +43,6 @@ export default function HeroSection() {
               <div className="trust-item">
                 <FaCheckCircle />
                 <span>Equipe especializada</span>
-              </div>
-              <div className="trust-item">
-                <FaCheckCircle />
-                <span>Atendimento digital</span>
               </div>
               <div className="trust-item">
                 <FaCheckCircle />
