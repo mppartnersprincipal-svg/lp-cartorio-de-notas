@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import {
-  FaHome, FaFileAlt, FaStamp, FaStar,
+  FaHome, FaFileAlt, FaStamp, FaCheckDouble,
   FaFileSignature, FaCheck, FaInfoCircle, FaWhatsapp,
 } from 'react-icons/fa'
 import { SERVICES, CONTACT } from '@/data/siteData'
@@ -10,7 +10,7 @@ const TAB_ICONS = {
   home: <FaHome />,
   fileAlt: <FaFileAlt />,
   stamp: <FaStamp />,
-  star: <FaStar />,
+  checkDouble: <FaCheckDouble />,
 }
 
 export default function ServicesSection() {
