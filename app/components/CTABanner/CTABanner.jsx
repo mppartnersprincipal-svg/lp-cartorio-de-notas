@@ -11,7 +11,7 @@ export default function CTABanner() {
         <div className="cta-banner-inner">
           <div className="section-badge">
             <FaWhatsapp />
-            Atendimento Imediato
+            Fale Conosco
           </div>
           <h2 className="section-title" style={{ color: 'var(--white)', maxWidth: '680px', margin: '0 auto 16px' }}>
             Precisou de cartório?<br />A solução está no WhatsApp

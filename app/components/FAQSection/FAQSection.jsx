@@ -18,11 +18,11 @@ const FAQS = [
   },
   {
     q: 'Como é calculado o valor dos serviços?',
-    a: 'Os emolumentos (taxas) são tabelados e publicados pelo Tribunal de Justiça de Goiás (TJGO), sendo iguais em todos os cartórios do estado. Podemos gerar um orçamento específico para o seu caso — basta entrar em contato.',
+    a: 'Os emolumentos (taxas) são tabelados e publicados pelo Tribunal de Justiça de Goiás (TJGO), sendo iguais em todos os cartórios do estado.',
   },
   {
     q: 'Vocês atendem clientes de outros estados?',
-    a: 'Sim! Atendemos clientes de todo o Brasil. Muitos serviços podem ser realizados de forma remota, como procurações, escrituras e outros atos. Fale conosco para verificar as possibilidades do seu caso específico.',
+    a: 'Sim! Atendemos clientes de todo o Brasil. Alguns serviços podem inclusive ser realizados de forma remota, como procurações, escrituras e outros atos. Fale conosco para verificar as possibilidades do seu caso específico.',
   },
   {
     q: 'O que é o reconhecimento de firma?',
