@@ -78,7 +78,7 @@ export default function AboutSection() {
         <div className="about-bio">
           <div className="about-bio-photo">
             <Image
-              src="/dr-joveny.webp"
+              src="/dr-joveny.png"
               alt="Dr. Joveny Sebastião Candido de Oliveira"
               fill
               sizes="(max-width: 768px) 100vw, 380px"
