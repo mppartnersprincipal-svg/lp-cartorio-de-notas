@@ -10,7 +10,7 @@ const FAQS = [
   },
   {
     q: 'Quais documentos preciso levar para uma escritura?',
-    a: 'Em geral, são necessários RG, CPF, comprovante de estado civil e os documentos específicos do ato (como a matrícula do imóvel, para escrituras imobiliárias). Nossa equipe orienta você com antecedência pelo WhatsApp.',
+    a: 'Em geral, são necessários RG, CPF e os documentos específicos do ato.',
   },
   {
     q: 'Posso resolver tudo pelo WhatsApp?',
@@ -57,12 +57,9 @@ export default function FAQSection() {
       <div className="container">
         <div className="faq-inner">
           <div className="section-header">
-            <div className="section-badge">
+            <h2 className="section-badge">
               <FaQuestionCircle />
               Dúvidas Frequentes
-            </div>
-            <h2 className="section-title">
-              Perguntas que nossos<br /><span>clientes fazem</span>
             </h2>
             <p className="section-subtitle">
               Respondemos as principais dúvidas sobre nossos serviços. Não encontrou o que procura? Fale diretamente conosco.
