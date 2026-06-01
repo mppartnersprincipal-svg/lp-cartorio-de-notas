@@ -10,17 +10,6 @@ export default function ContactSection() {
   return (
     <section id="contact">
       <div className="container">
-        <div className="section-header">
-          <div className="section-badge">
-            <FaMapMarkerAlt />
-            Onde estamos
-          </div>
-          <h2 className="section-title">Venha nos <span>visitar</span></h2>
-          <p className="section-subtitle">
-            Estamos no coração do Setor Sul de Goiânia, com fácil acesso e bom estacionamento.
-          </p>
-        </div>
-
         <div className="contact-grid">
           <div className="contact-items">
             <div className="contact-item">
@@ -72,7 +61,7 @@ export default function ContactSection() {
 
           <div className="contact-map">
             <iframe
-              src="https://maps.google.com/maps?q=Rua+115,+1498,+Setor+Sul,+Goiânia,+GO&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=R.+115,+1498+-+Setor+Sul,+Goiânia+-+GO,+74085-325&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '360px', display: 'block' }}

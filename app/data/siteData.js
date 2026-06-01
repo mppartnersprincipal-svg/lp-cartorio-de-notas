@@ -8,7 +8,7 @@ export const CONTACT = {
   email: 'tabeliao5oficio@gmail.com',
   address: 'R. 115, 1498 — Setor Sul\nGoiânia — GO, CEP 74085-325',
   hours: 'Segunda a Sexta — 8h às 17h',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=R.+115,+1498+Setor+Sul+Goiânia+GO',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=R.+115,+1498+-+Setor+Sul,+Goiânia+-+GO,+74085-325',
 }
 
 export const DIFFERENTIALS = [
