@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import { CONTACT } from '@/data/siteData'
+import Logo from '@/components/Logo/Logo'
 
 export default function Footer() {
   return (
@@ -7,15 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-inner">
           <div className="footer-brand">
-            <div>
-              <Image
-                src="/logo.png"
-                alt="5º Tabelionato de Notas de Goiânia"
-                width={160}
-                height={64}
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
+            <Logo theme="light" />
             <p>
               Há mais de 73 anos prestando serviços notariais com excelência, segurança jurídica e fé pública em Goiânia e para todo o Brasil.
             </p>

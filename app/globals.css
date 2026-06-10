@@ -265,10 +265,10 @@ section { overflow: hidden; }
 
 #navbar.scrolled { box-shadow: var(--shadow-md); }
 
-/* --- BARRA SUPERIOR (verde escuro) --- */
+/* --- BARRA SUPERIOR (branca) --- */
 .header-top {
-  background: var(--green-dark);
-  border-bottom: 2px solid rgba(138,156,80,0.45);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-top-inner {
@@ -278,11 +278,50 @@ section { overflow: hidden; }
   height: 88px;
 }
 
-.nav-logo {
+/* --- LOGO POR EXTENSO (ícone árvore + nome) --- */
+.brand-logo {
   display: flex;
   align-items: center;
+  gap: var(--sp-3);
   flex-shrink: 0;
 }
+
+.brand-logo-icon {
+  position: relative;
+  width: 58px;
+  height: 53px;
+  flex-shrink: 0;
+}
+
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brand-logo-line1 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-logo-line2 {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* Tema escuro (sobre fundo claro — header) */
+.brand-logo--dark .brand-logo-line1 { color: var(--green-dark); }
+.brand-logo--dark .brand-logo-line2 { color: var(--gold); }
+
+/* Tema claro (sobre fundo escuro — rodapé) */
+.brand-logo--light .brand-logo-line1 { color: var(--white); }
+.brand-logo--light .brand-logo-line2 { color: var(--green-light); }
 
 .header-top-info {
   display: flex;
@@ -297,7 +336,7 @@ section { overflow: hidden; }
 }
 
 .header-info-item > svg {
-  color: var(--green-light);
+  color: var(--green);
   font-size: 1.2rem;
   flex-shrink: 0;
 }
@@ -312,26 +351,26 @@ section { overflow: hidden; }
 .header-info-item > strong {
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--gray-dark);
 }
 
 .header-info-text span {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.6);
+  color: var(--gray-soft);
   letter-spacing: 0.03em;
 }
 
 .header-info-item a strong {
-  color: var(--white);
+  color: var(--gray-dark);
   transition: color var(--transition);
 }
 
-.header-info-item a:hover strong { color: var(--green-light); }
+.header-info-item a:hover strong { color: var(--green); }
 
 .header-info-sep {
   width: 1px;
   height: 38px;
-  background: rgba(255,255,255,0.2);
+  background: var(--border);
   flex-shrink: 0;
 }
 
@@ -877,6 +916,7 @@ section { overflow: hidden; }
 
 .about-bio-photo img {
   object-fit: cover;
+  object-position: top center;
 }
 
 .about-bio-photo-frame {
@@ -1842,6 +1882,9 @@ section { overflow: hidden; }
   /* Navbar mobile: esconde info e links, mostra hamburger */
   .header-top-info { display: none; }
   .header-top-inner { height: 72px; }
+  .brand-logo-icon { width: 48px; height: 44px; }
+  .brand-logo-line1 { font-size: 1.2rem; }
+  .brand-logo-line2 { font-size: 0.72rem; letter-spacing: 0.26em; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .nav-inner { height: 44px; justify-content: flex-end; }
