@@ -8,6 +8,7 @@ import DifferentialsSection from '@/components/DifferentialsSection/Differential
 import FAQSection from '@/components/FAQSection/FAQSection'
 import CTABanner from '@/components/CTABanner/CTABanner'
 import ContactSection from '@/components/ContactSection/ContactSection'
+import CareersSection from '@/components/CareersSection/CareersSection'
 import Footer from '@/components/Footer/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat/WhatsAppFloat'
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
@@ -25,6 +26,7 @@ export default function HomePage() {
       <FAQSection />
       <CTABanner />
       <ContactSection />
+      <CareersSection />
       <Footer />
       <WhatsAppFloat />
       <ScrollToTop />

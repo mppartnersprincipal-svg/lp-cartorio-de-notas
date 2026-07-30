@@ -39,6 +39,7 @@ export default function Footer() {
                   WhatsApp
                 </a>
               </li>
+              <li><a href="#careers">Trabalhe Conosco</a></li>
             </ul>
           </div>
         </div>

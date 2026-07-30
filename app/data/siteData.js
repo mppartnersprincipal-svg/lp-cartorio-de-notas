@@ -11,6 +11,12 @@ export const CONTACT = {
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=R.+115,+1498+-+Setor+Sul,+Goiânia+-+GO,+74085-325',
 }
 
+export const CAREERS = {
+  email: '5oficioatendimento@gmail.com',
+  emailSubject: 'Candidatura — Trabalhe Conosco',
+  emailBody: 'Olá! Gostaria de me candidatar a uma oportunidade no 5º Tabelionato de Notas de Goiânia. Segue meu currículo em anexo.',
+}
+
 export const DIFFERENTIALS = [
   {
     icon: 'whatsapp',

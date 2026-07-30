@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: '#services',     label: 'Serviços' },
   { href: '#about',        label: 'Sobre nós' },
   { href: '#contact',      label: 'Contato' },
+  { href: '#careers',      label: 'Trabalhe Conosco' },
 ]
 
 export default function Navbar() {

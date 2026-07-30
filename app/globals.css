@@ -1500,6 +1500,51 @@ section { overflow: hidden; }
 }
 
 /* ========================
+   CAREERS (TRABALHE CONOSCO)
+======================== */
+#careers {
+  padding: var(--sp-24) 0;
+  background: var(--green-pale);
+  border-top: 1px solid var(--border);
+}
+
+.careers-inner {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.careers-inner .section-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.careers-inner .section-subtitle {
+  margin: 0 auto var(--sp-10);
+}
+
+.careers-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-6);
+  font-size: 0.88rem;
+  color: var(--gray-mid);
+}
+
+.careers-note svg {
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.careers-note strong {
+  color: var(--gray-dark);
+  font-weight: 600;
+}
+
+/* ========================
    FOOTER
 ======================== */
 #footer {
